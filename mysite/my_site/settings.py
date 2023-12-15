@@ -31,13 +31,12 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    "Questionnaire",
-    "Accounts",
-    "signin",
     "therapists",
     "About",
     "main_page",
-    "submit_quiz",
+    "Accounts.apps.AccountsConfig",
+    "signin.apps.SigninConfig",
+    "Questionnaire.apps.QuestionnaireConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -61,7 +60,7 @@ ROOT_URLCONF = "my_site.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": ["my_site/templates","Accounts/templates","Questionnaire/templates"],
+        "DIRS": [ "my_site/templates","Accounts/templates","Questionnaire/templates","therapists/templates","signin/templates","About/templates","main_page/templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -90,6 +89,9 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
+# settings.py
+
+AUTH_USER_MODEL = 'signin.CustomUser'
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -123,7 +125,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"
-STATICFILES_DIRS= ["static"]
+STATICFILES_DIRS= [BASE_DIR]
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 

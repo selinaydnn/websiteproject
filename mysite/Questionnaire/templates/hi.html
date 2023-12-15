@@ -34,14 +34,14 @@ body {
             margin: 20px auto;
             padding: 10px 20px;
             font-size: 16px;
-            background-color: #3498db;
+            background-color: #FC6A03;
             color: #fff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
         input[type="submit"]:hover {
-            background-color: #2980b9;
+            background-color: #FFA500;
         }
     </style>
 </head>
@@ -51,51 +51,122 @@ body {
     <form action="Questionnaire.urls" method="post">
 
     <div class="question">
-            <p>2. What is the largest planet in our solar system?</p>
-            <input type="radio" id="q1_option1" name="q1" value="Mars">
-            <label for="q1_option1">Mars</label><br>
-            <input type="radio" id="q1_option2" name="q1" value="Venus">
-            <label for="q1_option2">Venus</label><br>
-            <input type="radio" id="q1_option3" name="q1" value="Jupiter">
-            <label for="q1_option3">Jupiter</label><br>
-            <input type="radio" id="q1_option4" name="q1" value="Saturn">
-            <label for="q1_option4">Saturn</label><br>
+            <p>1. What is your gender?</p>
+            <input type="radio" id="q1_option1" name="q1" value="Woman">
+            <label for="q1_option1">Woman</label><br>
+            <input type="radio" id="q1_option2" name="q1" value="Man">
+            <label for="q1_option2">Man</label><br>
+    </div>
+
+
+        <div class="question">
+            <p>2. What is your age?</p>
+            <label for="q2_text">Your Answer:</label>
+            <input type="text" id="q2_text" name="q4_text"><br>
+        </div>
+
+<div class="question">
+            <p>11. What is your relationship status?</p>
+            <input type="radio" id="q3_option1" name="q3" value="Single">
+            <label for="q11_option1">Single</label><br>
+            <input type="radio" id="q3_option2" name="q3" value="Married">
+            <label for="q11_option2">Married</label><br>
+              <input type="radio" id="q3_option3" name="q3" value="Divorced">
+            <label for="q11_option3">Divorced</label><br>
+              <input type="radio" id="q3_option4" name="q3" value="Widow">
+            <label for="q3_option4">Widow</label><br>
+
+        <div class="question">
+            <p>4. What is your employment status?</p>
+            <input type="radio" id="q4_option1" name="q4" value="I am currently working">
+            <label for="q3_option1">I am currently working</label><br>
+            <input type="radio" id="q4_option2" name="q4" value="I am not working right now">
+            <label for="q3_option2">I am not working right now</label><br>
+        </div>
+
+
+<div class="question">
+            <p>5. Overall life satisfaction(e.g., rate your satisfaction with life on a scale from 1 to 10. 10 being the highest.).</p>
+
+            <label for="q5_text">Your Answer:</label>
+            <input type="text" id="q5_text" name="q5_text"><br>
+        </div>
+
+
+        <div class="question">
+            <p>6. Percieved stress level(e.g., rate your satisfaction with life on a scale from 1 to 10. 10 being the highest.).</p>
+
+            <label for="q6_text">Your Answer:</label>
+            <input type="text" id="q6_text" name="q6_text"><br>
+        </div>
+
+
+
+        <div class="question">
+            <p>7. Emotional well-being(e.g., how often do you feel happy, sad, anxious?)</p>
+            <input type="radio" id="q7_option1" name="q7" value="Often">
+            <label for="q7_option1">Often</label><br>
+            <input type="radio" id="q7_option2" name="q7" value="Not at all">
+            <label for="q7_option2">Not at all</label><br>
 
         </div>
 
 
 
         <div class="question">
-            <p>1. What is the capital of France?</p>
-            <input type="radio" id="q2_option1" name="q2" value="Paris">
-            <label for="q2_option1">Paris</label><br>
-            <input type="radio" id="q2_option2" name="q2" value="Berlin">
-            <label for="q2_option2">Berlin</label><br>
-            <input type="radio" id="q2_option3" name="q2" value="Madrid">
-            <label for="q2_option3">Madrid</label><br>
-            <input type="radio" id="q2_option4" name="q2" value="Rome">
-            <label for="q2_option4">Rome</label><br>
-        </div>
- <div class="question">
-            <p>1. What is the capital of France?</p>
-            <input type="radio" id="q3_option1" name="q3" value="Paris">
-            <label for="q3_option1">Paris</label><br>
-            <input type="radio" id="q3_option2" name="q3" value="Berlin">
-            <label for="q1_option2">Berlin</label><br>
-            <input type="radio" id="q3_option3" name="q3" value="Madrid">
-            <label for="q3_option3">Madrid</label><br>
-            <input type="radio" id="q3_option4" name="q3" value="Rome">
-            <label for="q3_option4">Rome</label><br>
+            <p>8. Sleep patterns?</p>
+            <input type="radio" id="q8_option1" name="q8" value="Often">
+            <label for="q8_option1">Often</label><br>
+            <input type="radio" id="q8_option2" name="q8" value="Not at all">
+            <label for="q8_option2">Not at all</label><br>
+
         </div>
 
 
-<div class="question">
-            <p>2. What is the largest planet in our solar system?</p>
+        <div class="question">
+            <p>9. History of mental health concerns(e.g., depression, anxiety)</p>
+            <input type="radio" id="q9_option1" name="q9" value="Often">
+            <label for="q9_option1">Often</label><br>
+            <input type="radio" id="q9_option2" name="q9" value="Not at all">
+            <label for="q9_option2">Not at all</label><br>
 
-            <label for="q4_text">Your Answer:</label>
-            <input type="text" id="q2_text" name="q4_text"><br>
         </div>
 
+
+
+        <div class="question">
+            <p>10. Past and present use of mental health services or treatment?</p>
+            <input type="radio" id="q10_option1" name="q10" value="Often">
+            <label for="q10_option1">Often</label><br>
+            <input type="radio" id="q10_option2" name="q10" value="Not at all">
+            <label for="q10_option2">Not at all</label><br>
+
+        </div>
+
+
+          <div class="question">
+            <p>11. Current mental health symptoms(e.g.,Do you often feel hopeless?How often do you experience panic attacks?)</p>
+            <input type="radio" id="q11_option1" name="q11" value="Often">
+            <label for="q11_option1">Often</label><br>
+            <input type="radio" id="q11_option2" name="q11" value="Not at all">
+            <label for="q11_option2">Not at all</label><br>
+
+        </div>
+
+
+
+          <div class="question">
+            <p>12. What is your relationship status?</p>
+            <input type="radio" id="q12_option1" name="q12" value="Single">
+            <label for="q12_option1">Single</label><br>
+            <input type="radio" id="q12_option2" name="q12" value="Married">
+            <label for="q12_option2">Married</label><br>
+              <input type="radio" id="q12_option3" name="q12" value="Divorced">
+            <label for="q12_option3">Divorced</label><br>
+              <input type="radio" id="q12_option4" name="q12" value="Widow">
+            <label for="q12_option4">Widow</label><br>
+
+        </div>
          <input type="submit" value="Submit Quiz">
 {% endblock %}
 

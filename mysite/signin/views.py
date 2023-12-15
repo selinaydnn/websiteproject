@@ -8,8 +8,8 @@ def user_signup(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
-            # Assuming 'account' is the name of the URL pattern for the user's account page
-            return redirect('account')
+
+            return redirect('Accounts')
     else:
         form = UserCreationForm()
     return render(request, 'signup.html', {'form': form})
