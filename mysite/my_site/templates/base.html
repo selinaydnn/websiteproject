@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PSYMATCH</title>
+
+    <link rel="stylesheet" href=" css/scratch.css">
+    <style>
+        /* Add a black background color to the top navigation */
+        .topnav {
+            background-color: #311432 ;
+            overflow: hidden;
+        }
+
+        /* Style the links inside the navigation bar */
+        .topnav a{
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: black;
+}
+
+   footer  {
+       background-color: blue
+
+   }
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: grey;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+    </style>
+
+
+</head>
+<body>
+
+<div class="topnav">
+    <a href="/main_page">Main Page</a>
+    <a href="/Accounts">Login</a>
+    <a href="/Questionnaire">Quiz</a>
+    <a href="/therapists">Our Therapists</a>
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="/signin">Sign in</a>
+      <a href="/About">About us</a>
+    </div>
+  </div>
+
+
+</div>
+
+<img src="images/logo.jpeg" alt="Logo">
+{% block content %}
+   <h2> WELCOME TO PSYMATCH!</h2>
+  <p> Welcome to our site if you are looking for therapy session please click on "Questionnaire" on the navigation bar and  answer the questions that will help us to find your best match therapist.
+  </p>
+
+    <p>
+        If you are a therapist, please click on "Accounts" on the navigation bar.
+    </p>
+
+
+{% endblock %}
+
+
+</body>
+</html>

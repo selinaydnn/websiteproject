@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block content %}
+<html>
+<head>
+    <style>
+body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        label {
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+<h1>Quiz</h1>
+
+    <form action="Questionnaire.urls" method="post">
+
+    <div class="question">
+            <p>2. What is the largest planet in our solar system?</p>
+            <input type="radio" id="q1_option1" name="q1" value="Mars">
+            <label for="q1_option1">Mars</label><br>
+            <input type="radio" id="q1_option2" name="q1" value="Venus">
+            <label for="q1_option2">Venus</label><br>
+            <input type="radio" id="q1_option3" name="q1" value="Jupiter">
+            <label for="q1_option3">Jupiter</label><br>
+            <input type="radio" id="q1_option4" name="q1" value="Saturn">
+            <label for="q1_option4">Saturn</label><br>
+
+        </div>
+
+
+
+        <div class="question">
+            <p>1. What is the capital of France?</p>
+            <input type="radio" id="q2_option1" name="q2" value="Paris">
+            <label for="q2_option1">Paris</label><br>
+            <input type="radio" id="q2_option2" name="q2" value="Berlin">
+            <label for="q2_option2">Berlin</label><br>
+            <input type="radio" id="q2_option3" name="q2" value="Madrid">
+            <label for="q2_option3">Madrid</label><br>
+            <input type="radio" id="q2_option4" name="q2" value="Rome">
+            <label for="q2_option4">Rome</label><br>
+        </div>
+ <div class="question">
+            <p>1. What is the capital of France?</p>
+            <input type="radio" id="q3_option1" name="q3" value="Paris">
+            <label for="q3_option1">Paris</label><br>
+            <input type="radio" id="q3_option2" name="q3" value="Berlin">
+            <label for="q1_option2">Berlin</label><br>
+            <input type="radio" id="q3_option3" name="q3" value="Madrid">
+            <label for="q3_option3">Madrid</label><br>
+            <input type="radio" id="q3_option4" name="q3" value="Rome">
+            <label for="q3_option4">Rome</label><br>
+        </div>
+
+
+<div class="question">
+            <p>2. What is the largest planet in our solar system?</p>
+
+            <label for="q4_text">Your Answer:</label>
+            <input type="text" id="q2_text" name="q4_text"><br>
+        </div>
+
+         <input type="submit" value="Submit Quiz">
+{% endblock %}
+
+</body>
+</html>
