@@ -28,7 +28,6 @@ urlpatterns = [
     path("therapists/", include("therapists.urls")),
     path("main_page/", include("main_page.urls")),
     path("About/", include('About.urls')),
-
-
-
+    path("thesignin/", include('thesignin.urls')),
+    path("thelogin/", include('thelogin.urls')),
 ]

@@ -32,8 +32,10 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     "therapists",
+    "thesignin",
     "About",
     "main_page",
+    "thelogin",
     "Accounts.apps.AccountsConfig",
     "signin.apps.SigninConfig",
     "Questionnaire.apps.QuestionnaireConfig",
@@ -60,7 +62,7 @@ ROOT_URLCONF = "my_site.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [ "my_site/templates","Accounts/templates","Questionnaire/templates","therapists/templates","signin/templates","About/templates","main_page/templates"],
+        "DIRS": [ "my_site/templates","Accounts/templates","Questionnaire/templates","therapists/templates","signin/templates","About/templates","main_page/templates","thesignin/templates","thelogin/templates",],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

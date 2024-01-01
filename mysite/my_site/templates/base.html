@@ -8,7 +8,7 @@
     <style>
         /* Add a black background color to the top navigation */
         .topnav {
-            background-color: #311432 ;
+            background-color: #CEAA9A ;
             overflow: hidden;
         }
 
@@ -24,13 +24,13 @@
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #CA9B81;
   color: black;
 }
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #04AA6D;
+  background-color: #CA9B81;
   color: black;
 }
 
@@ -58,14 +58,14 @@
 
 /* Add a red background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: grey;
+  background-color: #CA9B81;
 }
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: #CEAA9A;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -74,7 +74,7 @@
 /* Links inside the dropdown */
 .dropdown-content a {
   float: none;
-  color: black;
+  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -83,13 +83,18 @@
 
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: #CA9B81;
 }
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
+        .logo-img {
+            max-width: 100px; /* Adjust the width as needed */
+            height: auto;
+            display: block;
+            margin: 5px; /* Add some margin around the logo */
 
     </style>
 
@@ -98,6 +103,10 @@
 <body>
 
 <div class="topnav">
+
+        <img src='static/psymatch.png', alt="Logo" class="logo-img">
+
+
     <a href="/main_page">Main Page</a>
     <a href="/Accounts">Login</a>
     <a href="/Questionnaire">Quiz</a>
@@ -107,16 +116,18 @@
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-        <a href="/signin">Sign in</a>
+        <a href="/signin">Sign Up</a>
+        <a href="/thesignin">Therapist Sign Up</a>
+        <a href="/thelogin">Therapist Login</a>
       <a href="/About">About us</a>
+
     </div>
   </div>
 
 
 </div>
 
- <link rel="stylesheet" href=" css/scratch.css">
-    <img src="mysite/logo.jpg" alt="My image">
+
 {% block content %}
    <h2> WELCOME TO PSYMATCH!</h2>
   <p> Welcome to our site if you are looking for therapy session please click on "Questionnaire" on the navigation bar and  answer the questions that will help us to find your best match therapist.

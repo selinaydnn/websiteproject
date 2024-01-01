@@ -20,12 +20,6 @@ def question(request):
 
 def submit_questionnaire(request):
     if request.method == 'POST':
-        # Process the form submission data here if needed
-        # You can access the submitted data using request.POST
-
-        # For example, you might save the form data to a database
-        # Replace this example with your actual logic for handling the form submission
-
         return redirect('therapists')
     else:
         return HttpResponse("Invalid request method")
