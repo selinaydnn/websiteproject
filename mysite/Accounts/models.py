@@ -1,5 +1,5 @@
 from django.db import models
-from signin.models import SignIn  # Import the SignIn model
+from signin.models import CustomUser  # Import the SignIn model
 
 class Login(models.Model):
-    signin = models.OneToOneField(SignIn, on_delete=models.CASCADE)
+    signin = models.OneToOneField(CustomUser, on_delete=models.CASCADE)

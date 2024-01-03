@@ -71,29 +71,13 @@ span.psw {
 <body>
     <h1>Sign Up</h1>
     <form method="post">
-        <div class="container">
-            <label for="uname"><b>Name</b></label>
-            <input type="text" placeholder="Enter Your Name" name="uname" required>
 
-            <label for="uname"><b>Last Name</b></label>
-            <input type="text" placeholder="Enter Your Last Name" name="uname" required>
+                {% csrf_token %}
+                {{form.as_p}}
 
-            <label for="uname"><b>Mail Address</b></label>
-            <input type="text" placeholder="Enter Your Mail Address" name="uname" required>
 
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Create a Username" name="uname" required>
 
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Create a Password" name="psw" required>
-
-    <button type="submit">Save</button>
-            <button type="submit">Sign Up</button>
-
-  </div>
-        <div class="container" style="background-color:#f1f1f1">
     </form>
 {% endblock %}
-</body>
-</html>
+
 

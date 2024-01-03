@@ -31,11 +31,11 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    "therapists",
-    "thesignin",
+    "therapists.apps.TherapistsConfig",
+    "thesignin.apps.ThesigninConfig",
     "About",
     "main_page",
-    "thelogin",
+    "thelogin.apps.TheloginConfig",
     "Accounts.apps.AccountsConfig",
     "signin.apps.SigninConfig",
     "Questionnaire.apps.QuestionnaireConfig",
@@ -62,7 +62,7 @@ ROOT_URLCONF = "my_site.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [ "my_site/templates","Accounts/templates","Questionnaire/templates","therapists/templates","signin/templates","About/templates","main_page/templates","thesignin/templates","thelogin/templates",],
+        "DIRS": [str(BASE_DIR.joinpath('templates')), "my_site/templates","Accounts/templates","Questionnaire/templates","therapists/templates","signin/templates","About/templates","main_page/templates","thesignin/templates","thelogin/templates",],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -127,6 +127,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"
+LOGIN_REDIRECT_URL = '/'
 STATICFILES_DIRS= [BASE_DIR]
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

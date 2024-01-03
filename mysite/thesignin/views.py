@@ -1,21 +1,19 @@
-from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login as auth_login
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.decorators import login_required
-
-
-def user_signup(request):
-    if request.method == 'POST':
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            form.save()
-
-            return redirect('Accounts')
-    else:
-        form = UserCreationForm()
-    return render(request, 'signup.html', {'form': form})
-
-
 from django.shortcuts import render
+from .models import TherapistSignup
+from django.http import HttpResponseRedirect
 
-# Create your views here.
+def therapist_signup(request):
+    if request.method == 'POST':
+        # Handle therapist sign-up form submission
+        # Retrieve form data and create a new TherapistSignup object
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        # Create a new TherapistSignup object
+        new_therapist = TherapistSignup(username=username, password=password)
+        new_therapist.save()
+
+        # Redirect to a success page or login page after sign-up
+        #return HttpResponseRedirect('/thelogin/templates/thelogin.html/')  # Redirect to therapist login page
+
+    return render(request, 'thesignup.html')  # Create therapist_signup.html template
