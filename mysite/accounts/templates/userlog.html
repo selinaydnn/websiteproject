@@ -1,17 +1,31 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<html>
-<head>
-    <title>Sign Up</title>
-    <style>
+
+{% load static %}
+   <a class="active" href=""><img src="logo.jpg'" alt="Logo" class="logo"></a>
+    <div class="container">
+        <h2>Login</h2>
+        <h3 class="login-text">Enter your accounts details here to login</h3>
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <form method="post" action="userlog">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="text" name="username" placeholder="Username">
+    <input type="password" name="password" placeholder="Password">
+    <button type="submit">Login</button>
+
+    </div>
+<style>
 body {font-family: Arial, Helvetica, sans-serif;}
 form {border: 3px solid #f1f1f1;}
 
 input[type=text], input[type=password] {
   width: 100%;
-  padding: 20px 20px;
-  margin: 10px 0;
+  padding: 15px 20px;
+  margin: 12px 0;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
@@ -20,8 +34,8 @@ input[type=text], input[type=password] {
 button {
   background-color: #311432;
   color: white;
-  padding: 15px 20px;
-  margin: 8px 0;
+  padding: 14px 20px;
+  margin: 12px 0;
   border: none;
   cursor: pointer;
   width: 100%;
@@ -48,7 +62,7 @@ img.avatar {
 }
 
 .container {
-  padding: 16px;
+  padding: 200px;
 }
 
 span.psw {
@@ -69,15 +83,9 @@ span.psw {
 </style>
 </head>
 <body>
-    <h1>Sign Up</h1>
-    <form method="post">
-
-                {% csrf_token %}
-                {{form.as_p}}
 
 
 
-    </form>
 {% endblock %}
-
-
+</body>
+</html>

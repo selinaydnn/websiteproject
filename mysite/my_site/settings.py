@@ -32,12 +32,9 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     "therapists.apps.TherapistsConfig",
-    "thesignin.apps.ThesigninConfig",
     "About",
     "main_page",
-    "thelogin.apps.TheloginConfig",
-    "Accounts.apps.AccountsConfig",
-    "signin.apps.SigninConfig",
+    "accounts",
     "Questionnaire.apps.QuestionnaireConfig",
     "django.contrib.admin",
     "django.contrib.auth",
@@ -62,7 +59,7 @@ ROOT_URLCONF = "my_site.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [str(BASE_DIR.joinpath('templates')), "my_site/templates","Accounts/templates","Questionnaire/templates","therapists/templates","signin/templates","About/templates","main_page/templates","thesignin/templates","thelogin/templates",],
+        "DIRS": [str(BASE_DIR.joinpath('templates')), "my_site/templates","Questionnaire/templates","therapists/templates","About/templates","main_page/templates","thelog/templates","thesign/templates","userlog/templates","usersign/templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -93,7 +90,7 @@ DATABASES = {
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 # settings.py
 
-AUTH_USER_MODEL = 'signin.CustomUser'
+AUTH_USER_MODEL = 'accounts.CustomUser'
 
 AUTH_PASSWORD_VALIDATORS = [
     {
